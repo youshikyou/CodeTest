@@ -43,7 +43,9 @@ class errorhandler501(Error):
     pass
 
 class shutdownhandler(object):
-
+    """
+        a gracefull shut down handler when it has "ctrl + c" registered
+    """
     def __init__(self, sig=signal.SIGINT):
         self.sig = sig
 
