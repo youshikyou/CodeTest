@@ -82,14 +82,10 @@ def logErrorFile(errorstr):
     """
         log the error and timestamp into errorloggin txt file
     """
-
-    # creating or opening a file
     f = open("errorlogging.txt", "a")
     ts = time.time()
     sttime = datetime.datetime.fromtimestamp(ts).strftime('%Y%m%d_%H:%M:%S - ')
-    # writing in the file
     f.write(sttime + errorstr + '\n')    
-    # closing the file
     f.close() 
 
 
@@ -104,7 +100,7 @@ def api(arg0, arg1):
             # a blocking call to list the folder's files
             originalPath = os.getcwd() 
             currentPath = originalPath + '\\' + arg0
-            os.chdir(currentPath) #go the current folder and list all the files
+            os.chdir(currentPath) # go the current folder and list all the files
             print(list(filter(os.path.isfile, os.listdir())))
             os.chdir(originalPath) #change it back to the orignal path
             time.sleep(5)
