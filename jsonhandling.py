@@ -42,6 +42,7 @@ class errorhandler501(Error):
     """ not implemented """
     pass
 
+# define shut down 
 class shutdownhandler(object):
     """
         a gracefull shut down handler when it has "ctrl + c" registered
@@ -77,7 +78,7 @@ class shutdownhandler(object):
 
         return True
 
-
+# define logging
 def logErrorFile(errorstr):
     """
         log the error and timestamp into errorloggin txt file
@@ -88,8 +89,7 @@ def logErrorFile(errorstr):
     f.write(sttime + errorstr + '\n')    
     f.close() 
 
-
-
+# define api 
 def api(arg0, arg1):
     """
         try to list the folder's files if the folder exists in the current path.
@@ -142,11 +142,3 @@ if __name__ == "__main__":
                 print("shutdown now")
                 time.sleep(2)
                 break
-    
-        
-    
-
-
-
-        
-
