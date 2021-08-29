@@ -81,7 +81,7 @@ class shutdownhandler(object):
 # define logging
 def logErrorFile(errorstr):
     """
-        log the error and timestamp into errorloggin txt file
+        log the error and timestamp into errorlogging txt file
     """
     f = open("errorlogging.txt", "a")
     ts = time.time()
